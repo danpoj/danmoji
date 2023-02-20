@@ -1,8 +1,11 @@
 import { Emoji } from '@/typings'
 import { decode } from 'querystring'
+import { useContext } from 'react'
+import { ViewState } from './ViewContext'
 
 const EmojiCard = ({ emoji }: { emoji: Emoji }) => {
   const { name, icon } = emoji
+  const { view } = useContext(ViewState)!
 
   const clipboardIcon = () => {
     navigator.clipboard.writeText(icon)
@@ -11,7 +14,9 @@ const EmojiCard = ({ emoji }: { emoji: Emoji }) => {
   return (
     <button
       onClick={clipboardIcon}
-      className='flex flex-col shadow aspect-square rounded-lg items-center justify-center hover:shadow-lg p-2 gap-2'
+      className={`flex flex-col shadow aspect-square rounded-lg items-center justify-center hover:shadow-lg p-2 gap-2 ${
+        view === 'sm' && 'p-4'
+      }`}
     >
       <span
         className='text-xl'
@@ -22,9 +27,11 @@ const EmojiCard = ({ emoji }: { emoji: Emoji }) => {
         {icon}
       </span>
 
-      <span className='font-mono text-[.7rem] truncate w-20 text-center'>
-        {name}
-      </span>
+      {view === 'lg' && (
+        <span className='font-mono text-[.7rem] truncate w-20 text-center'>
+          {name}
+        </span>
+      )}
     </button>
   )
 }
