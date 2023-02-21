@@ -20,7 +20,7 @@ export default function MenuBar() {
     <div className='flex flex-col gap-8 md:h-[40rem] py-4'>
       <ColorfulLogo />
 
-      <div className='flex md:flex-col gap-3 justify-between'>
+      <div className='flex md:flex-col gap-3 justify-center md:justify-between'>
         <SizeToggle />
         <DarkModeToggle />
       </div>
@@ -31,9 +31,9 @@ export default function MenuBar() {
           <Link
             href={category.path}
             key={i}
-            className={`text-sm font-light px-2 py-1 text-end ${
+            className={`text-sm px-2 py-1 text-end text-slate-500 ${
               isCurrentPage(category.path) &&
-              'bg-slate-800 text-slate-100 rounded'
+              'ring-slate-800 dark:text-slate-200 rounded ring-[1.5px] dark:ring-slate-400'
             }`}
           >
             {category.text}
@@ -47,8 +47,9 @@ export default function MenuBar() {
           <Link
             href={category.path}
             key={i}
-            className={`text-2xl font-light px-2 py-1 text-end ${
-              isCurrentPage(category.path) && 'ring-black ring-2 rounded-lg'
+            className={`text-2xl font-light px-2 py-1 text-end dark:brightness-50 ${
+              isCurrentPage(category.path) &&
+              'ring-black ring-2 rounded-lg dark:brightness-100'
             }`}
           >
             {category.icon}

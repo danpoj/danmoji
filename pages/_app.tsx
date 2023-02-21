@@ -1,12 +1,13 @@
 import ViewContext from '@/components/ViewContext'
 import '@/styles/globals.css'
+import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
 import { ToastContainer, Zoom } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider attribute='class'>
       <ViewContext>
         <Component {...pageProps} />
       </ViewContext>
@@ -17,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
         closeOnClick
         pauseOnHover={false}
         draggable
-        // theme='dark'
+        theme='light'
         transition={Zoom}
         style={{
           width: '240px',
@@ -26,6 +27,6 @@ export default function App({ Component, pageProps }: AppProps) {
           fontSize: '12px',
         }}
       />
-    </>
+    </ThemeProvider>
   )
 }

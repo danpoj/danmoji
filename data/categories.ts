@@ -1,21 +1,21 @@
 export const categories = [
   {
-    text: 'animals / nature',
+    text: 'animals • nature',
     path: 'animals-and-nature',
     icon: '🐧',
   },
   {
-    text: 'smileys / people',
+    text: 'smileys • people',
     path: 'smileys-and-people',
     icon: '😕',
   },
   {
-    text: 'food / drink',
+    text: 'food • drink',
     path: 'food-and-drink',
     icon: '🍳',
   },
   {
-    text: 'travel / places',
+    text: 'travel • places',
     path: 'travel-and-places',
     icon: '🗽',
   },
