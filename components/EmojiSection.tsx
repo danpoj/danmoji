@@ -8,8 +8,10 @@ export default function EmojiSection({ emojis }: { emojis: Emoji[] }) {
 
   return (
     <div
-      className={`grid grid-cols-4 gap-2 h-[40rem] overflow-y-scroll p-2 scrollbar-hide ${
-        view === 'sm' && 'grid-cols-7 p-[0.38rem]'
+      className={`grid gap-2 h-[40rem] overflow-y-scroll p-2 scrollbar-hide ${
+        view === 'sm'
+          ? 'grid-cols-5 md:grid-cols-7 p-[0.38rem]'
+          : 'grid-cols-3 md:grid-cols-4'
       }`}
     >
       {emojis.map((emoji) => (

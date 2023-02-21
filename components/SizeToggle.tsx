@@ -14,7 +14,7 @@ export default function SizeToggle() {
 
   return (
     <div className='flex items-center gap-2 justify-end'>
-      <span className='text-sm text-slate-900 font-bold'>Size</span>
+      <span className='text-sm text-slate-900 font-bold'>View</span>
       <label className='relative inline-flex items-center cursor-pointer'>
         <input
           onChange={onViewClick}
