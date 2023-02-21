@@ -56,17 +56,6 @@ export default function MenuBar() {
           </Link>
         ))}
       </div>
-
-      <div className='hidden md:flex flex-col gap-2 items-center'>
-        <p className='text-yellow-900 text-xs font-semibold'>
-          🎊 random Emoji!
-        </p>
-        <div className='bg-red-200 w-full h-32'>
-          <span className='w-full h-full flex justify-center items-center text-2xl'>
-            +
-          </span>
-        </div>
-      </div>
     </div>
   )
 }
