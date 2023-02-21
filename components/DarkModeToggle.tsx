@@ -10,7 +10,7 @@ export default function DarkModeToggle() {
   }, [])
 
   if (!mounted) {
-    return null
+    return <div className='h-10'></div>
   }
 
   const onDarkModeToggleClicked = () =>
