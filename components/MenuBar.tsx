@@ -17,7 +17,7 @@ export default function MenuBar() {
   }
 
   return (
-    <div className='flex flex-col gap-8 md:h-[40rem] py-4'>
+    <div className='flex flex-col gap-4 md:gap-8 md:h-[40rem] md:py-4'>
       <ColorfulLogo />
 
       <div className='flex md:flex-col gap-3 justify-center md:justify-between'>
@@ -47,14 +47,25 @@ export default function MenuBar() {
           <Link
             href={category.path}
             key={i}
-            className={`text-xl font-light px-2 py-1 text-end dark:brightness-50 ${
+            className={`text-xl font-light px-2 py-1 text-end ${
               isCurrentPage(category.path) &&
-              'ring-black ring-2 rounded-lg dark:brightness-100'
+              'ring-black ring-2 rounded-lg dark:ring-slate-500'
             }`}
           >
             {category.icon}
           </Link>
         ))}
+      </div>
+
+      <div className='hidden md:flex flex-col gap-2 items-center'>
+        <p className='text-yellow-900 text-xs font-semibold'>
+          🎊 random Emoji!
+        </p>
+        <div className='bg-red-200 w-full h-32'>
+          <span className='w-full h-full flex justify-center items-center text-2xl'>
+            +
+          </span>
+        </div>
       </div>
     </div>
   )

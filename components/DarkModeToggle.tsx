@@ -1,19 +1,32 @@
 import { useTheme } from 'next-themes'
+import { useState, useEffect } from 'react'
 
 export default function DarkModeToggle() {
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   const onDarkModeToggleClicked = () =>
     setTheme(theme === 'dark' ? 'light' : 'dark')
 
   return (
     <div className='flex items-center gap-2 justify-end'>
-      <span className='text-sm text-slate-900 dark:text-slate-300 font-bold'>
-        Dark
-      </span>
+      {theme && (
+        <span className='text-sm text-slate-900 dark:text-slate-300 font-bold'>
+          {theme === 'dark' ? '🌙' : '☀️'}
+        </span>
+      )}
       <label className='relative inline-flex items-center cursor-pointer'>
         <input
           onChange={onDarkModeToggleClicked}
+          checked={theme === 'dark'}
           type='checkbox'
           className='sr-only peer'
         />

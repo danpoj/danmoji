@@ -21,8 +21,9 @@ export default function App({ Component, pageProps }: AppProps) {
         theme='light'
         transition={Zoom}
         style={{
-          width: '240px',
-          maxWidth: '240px',
+          textAlign: 'center',
+          // width: '240px',
+          // maxWidth: '240px',
           fontWeight: 'bold',
           fontSize: '12px',
         }}

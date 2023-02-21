@@ -8,7 +8,7 @@ export default function EmojiSection({ emojis }: { emojis: Emoji[] }) {
 
   return (
     <div
-      className={`grid gap-2 h-[40rem] overflow-y-scroll p-2 scrollbar-hide ${
+      className={`grid gap-2 w-full md:w-auto h-[40rem] overflow-y-scroll p-2 scrollbar-hide ${
         view === 'sm'
           ? 'grid-cols-5 md:grid-cols-7 p-[0.38rem]'
           : 'grid-cols-3 md:grid-cols-4'
