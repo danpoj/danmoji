@@ -42,12 +42,12 @@ export default function MenuBar() {
       </div>
 
       {/* mobile 메뉴 */}
-      <div className='flex md:hidden gap-2'>
+      <div className='flex md:hidden gap-1 px-4'>
         {categories.map((category, i) => (
           <Link
             href={category.path}
             key={i}
-            className={`text-2xl font-light px-2 py-1 text-end dark:brightness-50 ${
+            className={`text-xl font-light px-2 py-1 text-end dark:brightness-50 ${
               isCurrentPage(category.path) &&
               'ring-black ring-2 rounded-lg dark:brightness-100'
             }`}
