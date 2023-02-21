@@ -4,10 +4,14 @@ import MenuBar from '@/components/MenuBar'
 import { categories } from '@/data/categories'
 import { getEmojis } from '@/lib/get-emoji'
 import { Emoji } from '@/typings'
+import Head from 'next/head'
 
 export default function CategoryPage({ emojis }: { emojis: Emoji[] }) {
   return (
     <Layout>
+      <Head>
+        <title>Danmoji</title>
+      </Head>
       <MenuBar />
       <EmojiSection emojis={emojis} />
     </Layout>
