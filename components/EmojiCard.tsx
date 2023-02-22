@@ -32,7 +32,7 @@ const EmojiCard = ({ emoji }: { emoji: Emoji }) => {
       </span>
 
       {view === 'lg' && (
-        <span className='font-mono text-[.7rem] truncate w-20 text-center dark:text-slate-400 px-1'>
+        <span className=' text-[.7rem] truncate w-20 text-center dark:text-slate-400 px-1'>
           {name}
         </span>
       )}
