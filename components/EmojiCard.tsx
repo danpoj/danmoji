@@ -19,7 +19,7 @@ const EmojiCard = ({ emoji }: { emoji: Emoji }) => {
     <button
       onClick={clipboardIcon}
       className={`flex flex-col shadow aspect-square rounded items-center justify-center hover:ring-[1.5px] hover:ring-stone-400 hover:shadow-none p-2 gap-2 transition-transform active:scale-90 dark:bg-stone-900 group dark:ring-stone-600 ${
-        view === 'sm' && 'p-4'
+        view === 'sm' ? 'md:w-16 md:h-16' : 'md:w-[7.31rem] md:h-[7.31rem]'
       }`}
     >
       <span

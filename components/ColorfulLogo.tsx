@@ -1,7 +1,7 @@
 export default function ColorfulLogo() {
   return (
     <div>
-      <h1 className='font-extrabold text-2xl text-center dark:brightness-90'>
+      <h1 className='font-black text-2xl text-center dark:brightness-90'>
         <span className='text-rose-500 underline text-3xl'>D</span>
         <span className='text-indigo-400'>a</span>
         <span className='text-violet-400'>n</span>

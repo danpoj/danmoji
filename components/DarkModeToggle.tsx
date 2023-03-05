@@ -31,7 +31,7 @@ export default function DarkModeToggle() {
     <div className='flex items-center gap-2 justify-end'>
       {theme && (
         <span className='text-sm text-slate-900 dark:text-slate-300 font-bold'>
-          {theme === 'dark' ? '🌙' : '☀️'}
+          🌙
         </span>
       )}
       <label className='relative inline-flex items-center cursor-pointer'>
